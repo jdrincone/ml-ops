@@ -3,17 +3,16 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - workflow_testing_app
+      - main
   pull_request:
     branches:
-      - workflow_testing_app
+      - main
 permissions:
   id-token: write
   contents: read
 
 jobs:
   testing-api:
-    name: Testing-api on Github Actions
     run-on: ubuntu-lates
     steps:
       - name: Checkouttherepo
